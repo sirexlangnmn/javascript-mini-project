@@ -1,75 +1,76 @@
- // Task manager class using ES6 class syntax
- class TaskManager {
-  constructor() {
-    this.tasks = [];
-    this.renderTasks = this.renderTasks.bind(this); // Binding the renderTasks method
-  }
+// Task manager class using ES6 class syntax
+class TaskManager {
+	constructor() {
+		this.tasks = [];
+		this.renderTasks = this.renderTasks.bind(this); // Binding the renderTasks method
+	}
 
-  addTask(taskText) {
-    const newTask = {
-      id: this.tasks.length + 1,
-      text: taskText,
-      completed: false,
-    };
-    this.tasks.push(newTask);
-    this.renderTasks();
-  }
+	addTask(taskText) {
+		const newTask = {
+			id: this.tasks.length + 1,
+			text: taskText,
+			completed: false,
+		};
+		this.tasks.push(newTask);
+		this.renderTasks();
+	}
 
-  toggleTask(taskId) {
-    const task = this.tasks.find(task => task.id === taskId);
-    if (task) {
-      task.completed = !task.completed;
-      this.renderTasks();
-    }
-  }
+	toggleTask(taskId) {
+		const task = this.tasks.find((task) => task.id === taskId);
+		if (task) {
+			task.completed = !task.completed;
+			this.renderTasks();
+		}
+	}
 
-  filterTasks(filter) {
-    let filteredTasks;
-    switch (filter) {
-      case 'completed':
-        filteredTasks = this.tasks.filter(task => task.completed);
-        break;
-      case 'incomplete':
-        filteredTasks = this.tasks.filter(task => !task.completed);
-        break;
-      default:
-        filteredTasks = this.tasks;
-    }
-    this.renderTasks(filteredTasks);
-  }
+	filterTasks(filter) {
+		let filteredTasks;
+		switch (filter) {
+			case 'completed':
+				filteredTasks = this.tasks.filter((task) => task.completed);
+				break;
+			case 'incomplete':
+				filteredTasks = this.tasks.filter((task) => !task.completed);
+				break;
+			default:
+				filteredTasks = this.tasks;
+		}
+		this.renderTasks(filteredTasks);
+	}
 
-  renderTasks(tasksToRender = this.tasks) {
-    const taskList = document.getElementById('taskList');
-    taskList.innerHTML = '';
+	renderTasks(tasksToRender = this.tasks) {
+		const taskList = document.getElementById('taskList');
+		taskList.innerHTML = '';
 
-    tasksToRender.forEach(task => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-        <input type="checkbox" ${task.completed ? 'checked' : ''} onchange="taskManager.toggleTask(${task.id})">
+		tasksToRender.forEach((task) => {
+			const listItem = document.createElement('li');
+			listItem.innerHTML = `
+        <input type="checkbox" ${task.completed ? 'checked' : ''
+				} onchange="taskManager.toggleTask(${task.id})">
         <span>${task.text}</span>
       `;
-      taskList.appendChild(listItem);
-    });
-  }
+			taskList.appendChild(listItem);
+		});
+	}
 }
 
 // Arrow functions for event handlers
 const taskManager = new TaskManager();
 
 const addTask = () => {
-  const taskInput = document.getElementById('taskInput');
-  const taskText = taskInput.value.trim();
+	const taskInput = document.getElementById('taskInput');
+	const taskText = taskInput.value.trim();
 
-  if (taskText !== '') {
-    taskManager.addTask(taskText);
-    taskInput.value = '';
-  }
+	if (taskText !== '') {
+		taskManager.addTask(taskText);
+		taskInput.value = '';
+	}
 };
 
 const filterTasks = () => {
-  const filterSelect = document.getElementById('filterSelect');
-  const selectedFilter = filterSelect.value;
-  taskManager.filterTasks(selectedFilter);
+	const filterSelect = document.getElementById('filterSelect');
+	const selectedFilter = filterSelect.value;
+	taskManager.filterTasks(selectedFilter);
 };
 
 // Adding event listeners using modern syntax
@@ -78,7 +79,6 @@ document.getElementById('filterSelect').addEventListener('change', filterTasks);
 
 // Initial rendering
 taskManager.renderTasks();
-
 
 /**
 
