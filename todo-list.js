@@ -1,13 +1,13 @@
 // Arrow function to add a task
 const addTask = () => {
-	const taskInput = document.getElementById('taskInput');
-	const taskList = document.getElementById('taskList');
+	const taskInput = getId('taskInput');
+	const taskList = getId('taskList');
 
 	if (taskInput.value.trim() !== '') {
-		const li = document.createElement('li');
+		const li = createElement('li');
 		li.textContent = taskInput.value;
 		li.addEventListener('click', toggleTaskComplete);
-		const deleteButton = document.createElement('button');
+		const deleteButton = createElement('button');
 		deleteButton.textContent = 'Delete';
 		deleteButton.addEventListener('click', deleteTask);
 		li.appendChild(deleteButton);
@@ -29,4 +29,4 @@ const toggleTaskComplete = (event) => {
 };
 
 // Event listener for the add task button
-document.getElementById('addTaskButton').addEventListener('click', addTask);
+onClickEvent('addTaskButton', addTask)

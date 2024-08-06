@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamelCase Converter</title>
+</head>
+<body>
+    <h1>CamelCase Converter</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="some-mixed_string with spaces_underscores-and-hyphens">
+    <button onclick="displayCamelCase()">Convert</button>
+    <h2>Output:</h2>
+    <p id="output"></p>
+
+    <script>
+        // const getInputString = () => document.getElementById('inputString').value;
+
+        // // const toLowerCase = str => str.toLowerCase();
+
+        // const isDelimiter = char => char === '-' || char === '_' || char === ' ';
+
+        // const capitalize = char => char.toUpperCase();
+
+        // const convertToCamelCase = str => {
+        //     let result = '';
+        //     let capitalizeNext = false;
+
+        //     for (const char of str) {
+        //         if (isDelimiter(char)) {
+        //             capitalizeNext = true;
+        //         } else {
+        //             result += capitalizeNext ? capitalize(char) : char;
+        //             capitalizeNext = false;
+        //         }
+        //     }
+
+        //     return result;
+        // };
+
+        // const displayCamelCase = () => {
+        //     const inputString = getInputString();
+        //     const lowerCaseString = toLowerCase(inputString);
+        //     const camelCaseString = convertToCamelCase(lowerCaseString);
+        //     document.getElementById('output').textContent = camelCaseString;
+        // };
+    </script>
+    <script src="global.js"></script>
+    <script src="camelized2.js"></script>
+</body>
+</html>

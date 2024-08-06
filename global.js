@@ -1,12 +1,12 @@
 "use strict";
-const getValue = (htmlId) => {
-    return document.getElementById(htmlId).value;
-}
+const getValue = (id) => document.getElementById(id).value;
 
-const getId = (htmlId) => {
-    return document.getElementById(htmlId);
-}
+const getId = (id) => document.getElementById(id);
 
-const onClickEvent = (htmlId, functionName) => {
-    document.getElementById(htmlId).addEventListener('click', functionName);
-}
+const onClickEvent = (id, functionName) => document.getElementById(id).addEventListener('click', functionName);
+
+const createElement = (id) => document.createElement(id);
+
+const toLowerCase = str => str.toLowerCase();
+
+const toUpperCase = str => str.toUpperCase();

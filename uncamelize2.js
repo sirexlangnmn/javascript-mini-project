@@ -14,7 +14,7 @@ const camelCaseToSpacedString = (str) => {
     return joinedStr.toLowerCase();
 };
 
-//* one liner version
+//* one line version
 // const camelCaseToSpacedString = (str) => {
 //     return str
 //         .split('')
