@@ -52,7 +52,6 @@ const getFirstUser = ([firstUser]) => {
 }
 
 
-// Get the first user's name
 const getFirstUserV2 = users => {
     const { first, last } = users[0].name;
     const firstUserName = `First User is: ${first} ${last}`;
