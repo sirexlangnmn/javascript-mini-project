@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Calculator</title>
+</head>
+<body>
+    <h1>Shape Calculator</h1>
+
+    <!-- Circle Calculation -->
+    <div>
+        <h2>Circle</h2>
+        <label for="circle-radius">Radius:</label>
+        <input type="number" id="circle-radius" />
+        <button onclick="calculateCircle()">Calculate Circle</button>
+        <div id="circle-output"></div>
+    </div>
+
+    <!-- Rectangle Calculation -->
+    <div>
+        <h2>Rectangle</h2>
+        <label for="rectangle-length">Length:</label>
+        <input type="number" id="rectangle-length" />
+        <label for="rectangle-width">Width:</label>
+        <input type="number" id="rectangle-width" />
+        <button onclick="calculateRectangle()">Calculate Rectangle</button>
+        <div id="rectangle-output"></div>
+    </div>
+
+    <!-- Square Calculation -->
+    <div>
+        <h2>Square</h2>
+        <label for="square-side">Side:</label>
+        <input type="number" id="square-side" />
+        <button onclick="calculateSquare()">Calculate Square</button>
+        <div id="square-output"></div>
+    </div>
+
+    <!-- Triangle Calculation -->
+    <div>
+        <h2>Triangle</h2>
+        <label for="triangle-base">Base:</label>
+        <input type="number" id="triangle-base" />
+        <label for="triangle-height">Height:</label>
+        <input type="number" id="triangle-height" />
+        <label for="triangle-side1">Side 1:</label>
+        <input type="number" id="triangle-side1" />
+        <label for="triangle-side2">Side 2:</label>
+        <input type="number" id="triangle-side2" />
+        <label for="triangle-side3">Side 3:</label>
+        <input type="number" id="triangle-side3" />
+        <button onclick="calculateTriangle()">Calculate Triangle</button>
+        <div id="triangle-output"></div>
+    </div>
+
+    <!-- Include the main JavaScript file -->
+    <script type="module" src="shapes.js"></script>
+</body>
+</html>
