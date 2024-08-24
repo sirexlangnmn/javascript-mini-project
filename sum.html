@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sum Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #171717; /* Dark background */
+            color: #E0E0E0; /* Light text color */
+        }
+        table {
+            width: 50%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 20px;
+            text-align: right;
+            border: 1px solid #ddd;
+            font-size: 24px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #total {
+            font-size: 34px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Sum Game</h1>
+    <table id="numberTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+    <div id="total">Total: 0</div>
+
+    <script src="sum.js"></script>
+</body>
+</html>
