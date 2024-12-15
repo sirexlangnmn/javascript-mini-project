@@ -39,6 +39,11 @@ function verifyDiscountCalculation() {
     const compactResult = calculateDiscountCompact(originalPrice, discountPercentage);
 
     // display results
+    console.log(`Traditional Function Result: ${traditionalResult}`)
+    console.log(`Arrow Function Result: ${arrowResult}`)
+    console.log(`Compact Arrow Function Result: ${compactResult}`)
+
+    // display results
     outputDiv.innerHTML = `
         <p>Traditional Function Result: ${traditionalResult}</p>
         <p>Arrow Function Result: ${arrowResult}</p>
