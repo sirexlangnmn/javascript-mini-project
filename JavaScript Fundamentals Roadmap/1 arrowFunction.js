@@ -25,6 +25,7 @@ const calculateDiscountCompact = (price, discountPercentage) =>
     price - (price * (discountPercentage / 100));
 
 
+
 // Verify that
 function verifyDiscountCalculation() {
     const outputDiv = document.getElementById('output');
