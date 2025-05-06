@@ -1,3 +1,7 @@
+// ============================
+// SAMPLE 1 : Nested Object
+// ============================
+
 const userData = {
     user: {
         name: "Raiven",
@@ -76,3 +80,54 @@ const UserProfile2 = ({ user: { name, age, contact: { email, phone }, hobbies = 
 
 
 console.log(`UserProfile2(userData) ==>>`, UserProfile2(userData));
+
+
+
+// ============================
+// SAMPLE 2 : Nested Object
+// ============================
+
+const response = {
+    user: {
+      id: 101,
+      profile: {
+        name: "Raiven",
+        email: "raiven@dev.com"
+      }
+    }
+  };
+  
+  const { user: { profile: { name, email } } } = response;
+  
+  console.log(`sample2 name ==> `, name);  // ?
+  console.log(`sample2 email ==> `, email); // ?
+  
+
+
+
+// ============================
+// SAMPLE 3 : Nested Object
+// ============================
+const props = {
+    id: 10,
+    data: {
+      user: {
+        nickName: "Rex",
+        roles: ["admin", "editor", "moderator"]
+      },
+      isActive: true
+    }
+  };
+  
+  const {
+    data: {
+      user: { nickName, roles: [primaryRole, , thirdRole] },
+      isActive
+    }
+  } = props;
+  
+  console.log(`sample3 nickName ==> `, nickName);    // ?
+  console.log(`sample3 primaryRole ==> `, primaryRole); // ?
+  console.log(`sample3 thirdRole ==> `, thirdRole);   // ?
+  console.log(`sample2 isActive ==> `, isActive);    // ?
+  
